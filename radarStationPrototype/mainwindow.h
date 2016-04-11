@@ -1,20 +1,15 @@
+// ======================================================================
+//  Copyright (c) 2016 by Vladimir Bespalov
+// ======================================================================
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-
 class RadarStationController;
 //class RadarStationModel;
-
-/*
-class RlmProtocolController;
-class RpProtocolController;
-class VrliProtocolController;
-class PrliProtocolController;
-*/
-
 class QTextEdit;
 class QLineEdit;
 QT_END_NAMESPACE
