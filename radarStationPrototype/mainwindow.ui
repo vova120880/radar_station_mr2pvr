@@ -1,0 +1,2183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>622</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_11">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="ConTab">
+       <attribute name="title">
+        <string>Соединение</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QGroupBox" name="connectionIpGroupBox">
+          <property name="title">
+           <string>ip адрес сервера (РЛС):</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QLineEdit" name="serverIp">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="inputMask">
+              <string>000.000.000.000;_</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="portsGroupBox">
+          <property name="title">
+           <string>Порты:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <layout class="QHBoxLayout" name="nmeaLayout">
+             <item>
+              <widget class="QLabel" name="nmeaCtrlLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>204</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>204</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>NMEA управление/tcp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="nmeaCtrlPort">
+               <property name="maximum">
+                <number>100000</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="nmeaSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="vrliStateLayout">
+             <item>
+              <widget class="QLabel" name="vrliStateLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>204</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>204</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>vrli (Цели) состояние/udp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="vrliStatePort">
+               <property name="maximum">
+                <number>100000</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="vrliStateSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="vrliCtrlLayout">
+             <item>
+              <widget class="QLabel" name="vrliCtrlLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>204</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>204</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>vrli (Цели) управление/tcp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="vrliCtrlPort">
+               <property name="maximum">
+                <number>100000</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="vrliCtrlSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="prliStateLayout">
+             <item>
+              <widget class="QLabel" name="prliStateLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>204</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>204</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>prli (ПРЛИ) состояние/udp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="prliStatePort">
+               <property name="maximum">
+                <number>100000</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="prliStateSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmStateLayout">
+             <item>
+              <widget class="QLabel" name="rlmStateLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>204</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>204</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>rlm (Состояние РЛС) состояние/udp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="rlmStatePort">
+               <property name="maximum">
+                <number>100000</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmStateSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmCtrlLayout">
+             <item>
+              <widget class="QLabel" name="rlmCtrlLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>204</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>204</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>rlm (Состояние РЛС) управление/tcp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="rlmCtrlPort">
+               <property name="maximum">
+                <number>100000</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmCtrlSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpStateLayout">
+             <item>
+              <widget class="QLabel" name="rpStateLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>204</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>204</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>rp (Режимы обработки) состояние/udp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="rpStatePort">
+               <property name="maximum">
+                <number>100000</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpStateSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpCtrlLayout">
+             <item>
+              <widget class="QLabel" name="rpCtrlLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>204</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>204</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>rp (Режимы обработки) управление/tcp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="rpCtrlPort">
+               <property name="maximum">
+                <number>100000</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpCtrlSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="conCtrlLayout">
+          <item>
+           <widget class="QPushButton" name="connectBtn">
+            <property name="text">
+             <string>Подключиться</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="conCtrlSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="conLogGroupBox">
+          <property name="title">
+           <string>Журнал:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <item>
+            <widget class="QTextEdit" name="conLog"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="conLogLayout">
+             <item>
+              <widget class="QPushButton" name="conLogClearBtn">
+               <property name="text">
+                <string>Очистить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="conLogSaveBtn">
+               <property name="text">
+                <string>Сохранить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="conLogSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="RlmTab">
+       <attribute name="title">
+        <string>rlm (Состояние РЛС)</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QGroupBox" name="rlmParamsGroupBox">
+          <property name="title">
+           <string>Параметры:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <layout class="QHBoxLayout" name="rlmPowerLayout">
+             <item>
+              <widget class="QLabel" name="rlmPowerLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Питание РЛМ (POWER):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rlmPowerVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rlmPowerDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>s1 – строка принимающая значения:
+&quot;ON&quot; - включено, &quot;OFF&quot; - выключено</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmPowerSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmAntenaLayout">
+             <item>
+              <widget class="QLabel" name="rlmAntenaLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Вращение антенны
+(ANTENA):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rlmAntenaVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rlmAntenaDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>s1 – строка принимающая значения:
+&quot;ON&quot; - включено, &quot;OFF&quot; - выключено</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmAntenaSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmWorkLayout">
+             <item>
+              <widget class="QLabel" name="rlmWorkLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Излучение (WORK):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rlmWorkVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rlmWorkDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>s1 – строка принимающая значения:
+&quot;ON&quot; - включено, &quot;OFF&quot; - выключено</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmWorkSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmPulseLayout">
+             <item>
+              <widget class="QLabel" name="rlmPulseLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Длительность импульса
+(PULSE):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rlmPulseVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rlmPulseDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>s1 – строка принимающая значения:
+&quot;SHORT&quot; - короткий, &quot;MIDDLE&quot; - средний, &quot;LONG&quot; - длинный</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmPulseSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmGainLayout">
+             <item>
+              <widget class="QLabel" name="rlmGainLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Усиление приемника
+(GAIN):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rlmGainVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rlmGainDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – целое, значение в диапазоне 0 - 255</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmGainSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmSeaAmplLayout">
+             <item>
+              <widget class="QLabel" name="rlmSeaAmplLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>ВАРУ-А (SEA_AMPL):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rlmSeaAmplVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rlmSeaAmplDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – целое, значение в диапазоне 0 - 255</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmSeaAmplSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmSeaDistLayout">
+             <item>
+              <widget class="QLabel" name="rlmSeaDistLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>ВАРУ-Д (SEA_DIST):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rlmSeaDistVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rlmSeaDistDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – целое, значение в диапазоне 0 - 255</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmSeaDistSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmCtrlParamsLayout">
+             <item>
+              <widget class="QPushButton" name="rlmSetBtn">
+               <property name="text">
+                <string>Записать</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="rlmGetBtn">
+               <property name="text">
+                <string>Прочитать</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmCtrlParamsSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="rlmLogGroupBox">
+          <property name="title">
+           <string>Журнал:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QTextEdit" name="rlmLog"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rlmLogLayout">
+             <item>
+              <widget class="QPushButton" name="rlmLogClearBtn">
+               <property name="text">
+                <string>Очистить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="rlmLogSaveBtn">
+               <property name="text">
+                <string>Сохранить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rlmLogSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="RpTab">
+       <attribute name="title">
+        <string>rp (Режимы обработки)</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QGroupBox" name="rpParamsGroupBox">
+          <property name="title">
+           <string>Параметры:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QHBoxLayout" name="rpRainLayout">
+             <item>
+              <widget class="QLabel" name="rpRainLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Дождь (RAIN):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rpRainVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rpRainDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – целое, значение в диапазоне 0 - 100</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpRainSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpLfFilterLayout">
+             <item>
+              <widget class="QLabel" name="rpLfFilterLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Асинхронный фильтр
+(LFFILTERVALUE):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rpLfFilterVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rpLfFilterDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – целое, значение в диапазоне 0 – 255.
+0 – фильтр выключен, 1 – 254 – параметр фильтрации</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpLfFilterSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpInterferenceLayout">
+             <item>
+              <widget class="QLabel" name="rpInterferenceLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Шумовой фильтр
+(SYNCINTERFERENCEMODE):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rpInterferenceVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rpInterferenceDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – целое, принимает значения 0 – выкл и 1 – вкл</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpInterferenceSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpScaleLayout">
+             <item>
+              <widget class="QLabel" name="rpScaleLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Переключение шкалы
+дальности (SCALE):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rpScaleVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rpScaleDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – число с плавающей точкой. шкала дальности оцифровки
+в морских милях. Принимает значения 8, 16, 32 или 64 миль.</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpScaleSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpGainLayout">
+             <item>
+              <widget class="QLabel" name="rpGainLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Уровень обнаружения
+(GAIN):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rpGainVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rpGainDescr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – целое, значение в диапазоне 0 - 100</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpGainSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpSeaLayout">
+             <item>
+              <widget class="QLabel" name="rpSeaLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Волны-А (SEA):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rpSeaVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rpSeaDiscr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – целое, значение в диапазоне 0 - 100</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpSeaSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpSeaDistLayout">
+             <item>
+              <widget class="QLabel" name="rpSeaDistLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Волны-Д (SEA_DIST):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="rpSeaDistVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rpSeaDistDiscr">
+               <property name="minimumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>320</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>p1 – целое, значение в диапазоне 0 - 100</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpSeaDistSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpCtrlParamsLayout">
+             <item>
+              <widget class="QPushButton" name="rpSetBtn">
+               <property name="text">
+                <string>Записать</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="rpGetBtn">
+               <property name="text">
+                <string>Прочитать</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpCtrlParamsSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="rpLogGroupBox">
+          <property name="title">
+           <string>Журнал:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <widget class="QTextEdit" name="rpLog"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="rpLogLayout">
+             <item>
+              <widget class="QPushButton" name="rpLogClearBtn">
+               <property name="text">
+                <string>Очистить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="rpLogSaveBtn">
+               <property name="text">
+                <string>Сохранить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="rpLogSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="VrliTab">
+       <attribute name="title">
+        <string>vrli (Цели)</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QGroupBox" name="vrliParamsGroupBox">
+          <property name="title">
+           <string>Параметры:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <layout class="QHBoxLayout" name="vrliTgtManualLayout">
+             <item>
+              <widget class="QLabel" name="vrliTgtManualLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Захват цели на ручное
+сопровождение (TGT_MANUAL):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="vrliTgtManualVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="vrliTgtManualDescr">
+               <property name="text">
+                <string>p1 – широта в гр., p2 – долгота в гр., p3 – радиус строба
+первичного захвата в метрах. Все параметры –
+десятичные дроби с точностью до шести знаков
+после запятой. Разделитель точка.</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="vrliTgtManualSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="vrliTgtResetLayout">
+             <item>
+              <widget class="QLabel" name="vrliTgtResetLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Сброс цели с
+сопровождения (TGT_RESET):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="vrliTgtResetVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="vrliTgtResetDescr">
+               <property name="text">
+                <string>p1 – номер цели, целое</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="vrliTgtResetBtn">
+               <property name="text">
+                <string>Сбросить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="vrliTgtResetSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="vrliTgtResetLostLayout">
+             <item>
+              <widget class="QLabel" name="vrliTgtResetLostLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Сброс всех потерянных целей
+(TGT_RESET_LOST):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="vrliTgtResetLostVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="vrliTgtResetLostDescr">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="vrliTgtResetLostBtn">
+               <property name="text">
+                <string>Сбросить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="vrliTgtResetLostSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="vrliAutoOnLayout">
+             <item>
+              <widget class="QLabel" name="vrliAutoOnLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Включение автоматического
+ захвата целей
+(AUTO_CAPTURE_ON):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="vrliAutoOnVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="vrliAutoOnDescr">
+               <property name="text">
+                <string>a1 - курсовой угол начала зоны автозахвата в градусах
+a2 - курсовой угол конца зоны автозахвата в градусах
+d1- ближняя граница зоны автозахвата в метрах
+d2 - дальняя граница зоны автозахвата в метрах</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="vrliAutoOnSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="vrliAutoOffLayout">
+             <item>
+              <widget class="QLabel" name="vrliAutoOffLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>160</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Выключение автоматического
+захвата целей
+(AUTO_CAPTURE_OFF):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="vrliAutoOffVal">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="vrliAutoOffDescr">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="vrliAutoOffBtn">
+               <property name="text">
+                <string>Выключить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="vrliAutoOffSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="vrliCtrlParamsLayout">
+             <item>
+              <widget class="QPushButton" name="vrliTgtManualBtn">
+               <property name="text">
+                <string>Захват на ручное сопровождение</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="vrliAutoOnBtn">
+               <property name="text">
+                <string>Автоматический захват</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="vrliCtrlParamsSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="vrliLogGroupBox">
+          <property name="title">
+           <string>Журнал:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <widget class="QTextEdit" name="vrliLog"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="vrliLogLayout">
+             <item>
+              <widget class="QPushButton" name="vrliLogClearBtn">
+               <property name="text">
+                <string>Очистить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="vrliLogSaveBtn">
+               <property name="text">
+                <string>Сохранить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="vrliParsePackets">
+               <property name="text">
+                <string>Разбирать пакеты</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="vrliSavePackets">
+               <property name="text">
+                <string>Сохранять пакеты</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="vrliLogSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="PrliTab">
+       <attribute name="title">
+        <string>prli (ПРЛИ)</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_16">
+        <item>
+         <widget class="QGroupBox" name="prliLogGroupBox">
+          <property name="title">
+           <string>Журнал:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QTextEdit" name="prliLog"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QPushButton" name="prliLogClearBtn">
+               <property name="text">
+                <string>Очистить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="prliLogSaveBtn">
+               <property name="text">
+                <string>Сохранить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="prliParsePackets">
+               <property name="text">
+                <string>Разбирать пакеты</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="prliSavePackets">
+               <property name="text">
+                <string>Сохранять пакеты</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="prliLogSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>622</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
